@@ -1,9 +1,5 @@
 import discord
-
-from decouple import config
-
-TOKEN = config('MY_TOKEN')
-
+import os
 
 client = discord.Client()
 
@@ -32,4 +28,8 @@ async def on_message(message):
 
 
 
-client.run(TOKEN)
+client.run(os.environ['MY_TOKEN'])
+
+
+
+
