@@ -1,5 +1,8 @@
 import discord
 
+from decouple import config
+
+TOKEN = config('MY_TOKEN')
 
 
 client = discord.Client()
@@ -8,9 +11,6 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('Bot is now online and ready for work')
-
-
-    
 
 
 @client.event
@@ -32,4 +32,4 @@ async def on_message(message):
 
 
 
-client.run('')
+client.run(TOKEN)

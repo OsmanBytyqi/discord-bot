@@ -1,1 +1,3 @@
-pip3 install discord.py
+
+discord.py==1.7.3
+
