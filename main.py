@@ -27,25 +27,10 @@ async def on_message(message):
          await message.channel.send('`Good luck !!! :)` ')
     if message.content=='kur??'or message.content=='kur???' or message.content=='kur????'|message.content=='kur?':
          await message.channel.send('**Very soon**  ')
+         
+
     
-    if message.content == 'cool':
-        await message.add_reaction('\U0001F60E')
 
-     
-
-
-@client.event
-async def on_message_edit(before, after):
-    await before.channel.send(
-        f'{before.author} edit a message.\n'
-        f'Before: {before.content}\n'
-        f'After: {after.content}'
-    )
-
-
-@client.event
-async def on_reaction_add(reaction, user):
-    await reaction.message.channel.send(f'{user} reacted with {reaction.emoji}')
 
 
 client.run(os.environ['MY_TOKEN'])
