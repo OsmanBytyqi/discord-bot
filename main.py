@@ -25,7 +25,7 @@ async def on_message(message):
 
     if message.content=='neser kam provim':
          await message.channel.send('`Good luck !!! :)` ')
-    if message.content=='kur??'or message.content=='kur???' or message.content=='kur????'|message.content=='kur?':
+    if message.content=='kur??'or message.content=='kur???' or message.content=='kur????':
          await message.channel.send('**Very soon**  ')
          
 
