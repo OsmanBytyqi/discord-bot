@@ -13,27 +13,27 @@ async def on_ready():
 
 
 @client.event
-async def on_message(message,user):
+async def on_message(message):
 
     if message.author == client.user:
         return
 
     if message.content == 'hello':
-        await message.channel.send(f'Welcome to our server {user}')
+        await message.channel.send(f'Welcome to our server {client.user}')
 
     if message.content == 'stres'or message.content == 'stres shume'or message.content == 'shume stres':
-        await message.channel.send(f'**it\'s gonna be okay** {user}')
+        await message.channel.send(f'**it\'s gonna be okay** {client.user}')
 
     if message.content == 'neser kam provim':
-        await message.channel.send(f'**Good luck** {user}')
+        await message.channel.send(f'**Good luck** {client.user}')
 
 
 @client.event
 async def on_message_edit(before, after):
     await before.channel.send(
         f'{before.author} edit a message.\n'
-        f'Before: {before.content}\n'
-        f'After: {after.content}'
+        f'Before:` {before.content}\n`'
+        f'After: `{after.content}`'
     )        
 
 
