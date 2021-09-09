@@ -19,13 +19,13 @@ async def on_message(message):
         return
 
     if message.content == 'hello':
-        await message.channel.send(f'Welcome to our server')
+        await message.channel.send('Welcome to our server')
 
     if message.content == 'stres'or message.content == 'stres shume'or message.content == 'shume stres':
-        await message.channel.send(f'**it\'s gonna be okay**')
+        await message.channel.send('**it\'s gonna be okay**')
 
     if message.content == 'neser kam provim':
-        await message.channel.send(f'**Good luck**')
+        await message.channel.send('**Good luck**')
 
 
 @client.event
