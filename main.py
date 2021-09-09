@@ -24,8 +24,7 @@ async def on_message(message):
     if message.content == 'stres'or message.content == 'stres shume'or message.content == 'shume stres':
         await message.channel.send('**it\'s gonna be okay**')
 
-    if message.content == 'neser kam provim':
-        await message.channel.send('**Good luck**')
+   
 
 
 @client.event
