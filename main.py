@@ -13,15 +13,33 @@ async def on_ready():
 
 
 @client.event
-async def on_message(message):
+async def on_message(message,user):
 
     if message.author == client.user:
         return
 
     if message.content == 'hello':
-        await message.channel.send('Welcome to thenewboston!')
+        await message.channel.send(f'Welcome to our server {user}')
 
-         
+    if message.content == 'stres'or message.content == 'stres shume'or message.content == 'shume stres':
+        await message.channel.send(f'**it\'s gonna be okay** {user}')
+
+    if message.content == 'neser kam provim':
+        await message.channel.send(f'**Good luck** {user}')
+
+
+@client.event
+async def on_message_edit(before, after):
+    await before.channel.send(
+        f'{before.author} edit a message.\n'
+        f'Before: {before.content}\n'
+        f'After: {after.content}'
+    )        
+
+
+@client.event
+async def on_reaction_add(reaction, user):
+    await reaction.message.channel.send(f'{user} reacted with {reaction.emoji}')
 
     
 
