@@ -11,5 +11,6 @@ Install required packages:
 
 
 ```
-pip3 -r requirements.txt
+pip3 install -r requirements.txt
+
 ```
