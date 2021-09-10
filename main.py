@@ -1,6 +1,8 @@
 import discord
 import os
 
+from discord import message
+
 
 client = discord.Client()
 
@@ -29,6 +31,8 @@ async def on_message(message):
 
 @client.event
 async def on_message_edit(before, after):
+    if message.author=='1026#9294':
+        return
     await before.channel.send(
         f'{before.author} edit a message.\n'
         f'Before:` {before.content}\n`'
