@@ -39,7 +39,7 @@ async def on_message(message):
        for file in message.attachments:
             for ext in pic_ext:
                 if file.filename.endswith(ext):
-                    await message.channel.send('HAHAHAHAHHAHA DEKA DEKA ')
+                    await message.channel.send('HAHAHAHAHHAHAHAHAHAH ')
 
 
 
