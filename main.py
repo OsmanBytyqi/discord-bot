@@ -27,7 +27,7 @@ async def on_message(message):
         await message.channel.send('**it\'s gonna be okay**')
 
 @client.event
-async def on_message(message)
+async def on_message(message):
     pic_ext = ['.jpg','.png','.jpeg','.gif']
     for ext in pic_ext:
        if message.content.endswith(ext):
