@@ -35,11 +35,11 @@ async def on_message(message):
 @client.event
 async def on_message(message):
     if len(message.attachments) > 0: #Checks if there are attachments
-       pic_ext = ['.jpg','.png','.jpeg']
+       pic_ext = ['.jpg','.png','.jpeg','.gif']
        for file in message.attachments:
             for ext in pic_ext:
                 if file.filename.endswith(ext):
-                    await message.channel.send('hahahah')
+                    await message.channel.send('HAHAHAHAHHAHA DEKA DEKA ')
 
 
 
