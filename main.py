@@ -26,23 +26,20 @@ async def on_message(message):
     if message.content == 'hello':
         await message.channel.send('Welcome to our server')
 
-    
-    if message.endswith('.jpg'):
-        await message.channel.send("HAHAAHAHAHAH")
-        
-    if message.endswith('.png'):
-        await message.channel.send("HAHAAHAHAHAH")
-
-    if message.endswith('.jpeg'):
-        await message.channel.send("HAHAAHAHAHAH")
-
+   
     if message.content == 'stres'or message.content == 'stres shume'or message.content == 'shume stres':
         await message.channel.send('**it\'s gonna be okay**')
 
 
 
-
-
+@client.event
+async def on_message(message):
+    if len(message.attachments) > 0: #Checks if there are attachments
+       pic_ext = ['.jpg','.png','.jpeg']
+       for file in message.attachments:
+            for ext in pic_ext:
+                if file.filename.endswith(ext):
+                    await message.channel.send('hahahah')
 
 
 
