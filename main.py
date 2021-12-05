@@ -26,7 +26,12 @@ async def on_message(message):
     if message.content == 'stres'or message.content == 'stres shume'or message.content == 'shume stres':
         await message.channel.send('**it\'s gonna be okay**')
 
-   
+@client.event
+async def on_message(ctx, message)
+    pic_ext = ['.jpg','.png','.jpeg']
+    for ext in pic_ext:
+    if message.content.endswith(ext):
+        ctx.send("HAHAHHAHAHAHAHAH")```
 
 
 @client.event
