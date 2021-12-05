@@ -33,6 +33,7 @@ async def on_message(message):
 
     if message.content == 'stres'or message.content == 'stres shume'or message.content == 'shume stres':
         await message.channel.send('**it\'s gonna be okay**')
+<<<<<<< HEAD
 
 
 
@@ -43,6 +44,16 @@ async def on_message(message):
 
           
 
+=======
+      
+      
+@client.event
+async def on_message(message):
+    pic_ext = ['.jpg','.png','.jpeg']
+    for ext in pic_ext:
+        if message.content.endswith(ext):
+            await   message.send("HAHAHAHAHAHAHAH")
+>>>>>>> origin
 
 @client.event
 async def on_message_edit(before, after):
