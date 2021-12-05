@@ -17,7 +17,6 @@ async def on_ready():
 @client.event
 async def on_message(message):
 
-    extension = ['.jpg','.png','.jpeg']
 
 
 
@@ -27,9 +26,15 @@ async def on_message(message):
     if message.content == 'hello':
         await message.channel.send('Welcome to our server')
 
-    for ext in extension:
-        if message.content.endswith(ext):
-            await message.channel.send("hello there")
+    
+    if message.endswith('.jpg'):
+        await message.channel.send("HAHAAHAHAHAH")
+        
+    if message.endswith('.png'):
+        await message.channel.send("HAHAAHAHAHAH")
+
+    if message.endswith('.jpeg'):
+        await message.channel.send("HAHAAHAHAHAH")
 
     if message.content == 'stres'or message.content == 'stres shume'or message.content == 'shume stres':
         await message.channel.send('**it\'s gonna be okay**')
