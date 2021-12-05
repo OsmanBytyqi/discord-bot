@@ -28,7 +28,7 @@ async def on_message(message):
 
 @client.event
 async def on_message(ctx, message)
-    pic_ext = ['.jpg','.png','.jpeg']
+    pic_ext = ['.jpg','.png','.jpeg','.gif']
     for ext in pic_ext:
       if message.content.endswith(ext):
         ctx.send("HAHAHHAHAHAHAHAH")
