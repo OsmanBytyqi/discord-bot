@@ -28,11 +28,11 @@ async def on_message(message):
       
       
 @client.event
-async def on_message(ctx, message):
+async def on_message(message):
     pic_ext = ['.jpg','.png','.jpeg']
     for ext in pic_ext:
         if message.content.endswith(ext):
-            await   ctx.send("HAHAHAHAHAHAHAH")
+            await   message.send("HAHAHAHAHAHAHAH")
 
 @client.event
 async def on_message_edit(before, after):
