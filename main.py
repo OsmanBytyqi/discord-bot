@@ -48,18 +48,16 @@ async def on_message(message):
 
 @client.event
 async def on_message_edit(before, after):
-   
     await before.channel.send(
         f'{before.author} edit a message.\n'
-        f'Before:` {before.content}\n`'
-        f'After: `{after.content}`'
-    )        
+        f'Before: {before.content}\n'
+        f'After: {after.content}'
+    )
 
 
 @client.event
 async def on_reaction_add(reaction, user):
     await reaction.message.channel.send(f'{user} reacted with {reaction.emoji}')
-
     
 
 
